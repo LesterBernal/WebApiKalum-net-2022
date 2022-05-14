@@ -3,7 +3,7 @@ using WebApiKalum.Entities;
 
 namespace WebApiKalum
 {
-    public class WebApiKalum : DbContext
+    public class KalumDbContext : DbContext
     {
 
         public DbSet<CarreraTecnica> CarreraTecnica{get; set;}
@@ -12,8 +12,8 @@ namespace WebApiKalum
 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        (
-            modelBuilder.Entity<CarreraTecnica>().ToTable("CarreraTecnica").Haskey(ct => new {ct.CarreraId});
-        )
+        {
+            modelBuilder.Entity<CarreraTecnica>().ToTable("CarreraTecnica").HasKey(ct => new {ct.CarreraId});
+        }
     }
 }
