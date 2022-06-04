@@ -8,6 +8,7 @@ namespace WebApiKalum.Entities
         public double Monto {get; set; }
         public bool GeneraMora {get; set; }
         public int ProcentajeMora {get; set; }
+        public virtual List<CuentaXCobrar> CuentaXCobrars { get; set; }
         
     }
 }
