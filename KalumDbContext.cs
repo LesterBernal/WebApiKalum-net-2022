@@ -56,7 +56,7 @@ namespace WebApiKalum
             modelBuilder.Entity<Inscripcion>()
                 .HasOne<CarreraTecnica>(i => i.CarreraTecnica)
                 .WithMany(ct =>ct.Inscripciones)
-                .HasForeignKey(i => i.InscripcionId);
+                .HasForeignKey(i => i.CarreraId);
 
             modelBuilder.Entity<Inscripcion>()
                 .HasOne<Jornada>(i => i.Jornada)
