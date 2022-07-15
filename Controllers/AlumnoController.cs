@@ -51,6 +51,54 @@ namespace WebApiKalum.Controllers
 
         }
 
+        [HttpPost]
+
+        public async Task<ActionResult<Alumno>> Post([FromBody] Alumno value)
+        {
+            Logger.LogDebug("Iniciando el proceso de agregar una alumno nuevo");
+            value.Carne= Guid.NewGuid().ToString().ToUpper();
+            await DbContext.Alumno.AddAsync(value);
+            await DbContext.SaveChangesAsync();
+            Logger.LogInformation("Finalizando el proceso de agregar Alumno");
+            return new CreatedAtRouteResult("GetAlumno", new {id = value.Carne}, value);
+        }
+        [HttpDelete("{Id}")]
+        public async Task<ActionResult<Alumno>> Delete(string id)
+        {
+            Logger.LogDebug("Iniciando el proceso de eliminar Alumno");
+            Alumno alumno = await DbContext.Alumno.FirstOrDefaultAsync(ct=> ct.Carne == id);
+            if(alumno == null)
+            {
+                Logger.LogWarning($"No se econtro ninguna alumno con el id {id}");
+                return NotFound();
+            }
+            else
+            {
+                DbContext.Alumno.Remove(alumno);
+                await DbContext.SaveChangesAsync();
+                Logger.LogInformation($"Se ha eliminado correctamente el alumno con el id {id}");
+                return alumno;
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Put(string id, [FromBody] Alumno value)
+        {
+            Logger.LogDebug($"Iniciando el proceso de actualziacion del alumno con el id {id}");
+            Alumno alumno = await DbContext.Alumno.FirstOrDefaultAsync(ct => ct.Carne == id);
+            if(alumno == null)
+            {
+                Logger.LogWarning($"No existe alumno con el ID {id}");
+                return BadRequest();
+            }
+            alumno.Nombres = value.Nombres;
+            DbContext.Entry(alumno).State = EntityState.Modified;
+            await DbContext.SaveChangesAsync();
+            Logger.LogInformation("Los datos han sido actualizados correctamente");
+            return NoContent();
+        
+        }
+
 
     }
 }

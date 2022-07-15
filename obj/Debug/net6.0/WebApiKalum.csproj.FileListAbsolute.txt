@@ -63,3 +63,5 @@ C:\2022\kinal\net\backend\prod\WebApiKalum\bin\Debug\net6.0\Microsoft.AspNetCore
 C:\2022\kinal\net\backend\prod\WebApiKalum\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\2022\kinal\net\backend\prod\WebApiKalum\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\2022\kinal\net\backend\prod\WebApiKalum\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\2022\kinal\net\backend\prod\WebApiKalum\bin\Debug\net6.0\AutoMapper.dll
+C:\2022\kinal\net\backend\prod\WebApiKalum\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

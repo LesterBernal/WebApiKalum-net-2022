@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace WebApiKalum.Entities
 {
     public class CuentaXCobrar
@@ -9,8 +11,11 @@ namespace WebApiKalum.Entities
         public string Descripcion {get; set; }
         public DateTime FechaCargo {get; set; }
         public DateTime FechaAplica {get; set; }
+        [Column(TypeName = "decimal(18,4)")]
         public decimal Monto {get; set; }
+        [Column(TypeName = "decimal(18,4)")]
         public decimal Mora {get; set; }
+        [Column(TypeName = "decimal(18,4)")]
         public decimal Descuento {get; set; }
        public virtual Cargo Cargo {get; set; }
 

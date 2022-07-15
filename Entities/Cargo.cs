@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace WebApiKalum.Entities
 {
     public class Cargo
@@ -5,6 +7,7 @@ namespace WebApiKalum.Entities
         public string CargoId { get; set; }
         public string Descripcion {get; set; }
         public string Prefijo {get; set; }
+        [Column(TypeName = "decimal(18,4)")]
         public decimal Monto {get; set; }
         public bool GeneraMora {get; set; }
         public int PorcentajeMora {get; set; }

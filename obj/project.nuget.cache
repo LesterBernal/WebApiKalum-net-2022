@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "isvMLDmR0jv/yZ4YFDs2Ji2ggGzwIhepLldjIrSgT4enrrOSdeKktI9Ie1u1xo9d77jaCspqVzd2dgBcdas3WA==",
+  "dgSpecHash": "st2JHXKAGbubEbTsff+5Eiv7oaJwXUAc0JYlzs744fHYe4ahpHU+qJDnQbttb0JS4rW7cjKSHwkjtIaF7s5FvA==",
   "success": true,
   "projectFilePath": "C:\\2022\\kinal\\net\\backend\\prod\\WebApiKalum\\WebApiKalum.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\leste\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\leste\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\leste\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\leste\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.5\\microsoft.aspnetcore.jsonpatch.6.0.5.nupkg.sha512",
     "C:\\Users\\leste\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.5\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.5.nupkg.sha512",
